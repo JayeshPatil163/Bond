@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bond - The Legend of James Bond Cars</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <h1>Bond</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#models">Models</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2>Unleash the Legend</h2>
+      <p>Discover the precision, style, and performance of Bond Cars—crafted for the modern hero.</p>
+      <a href="#models" class="btn">Explore Our Models</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="about-text">
+      <h2>About Bond</h2>
+      <p>Bond Cars represent the perfect blend of sophistication and power. Inspired by the legendary James Bond, our cars redefine luxury, performance, and innovation.</p>
+    </div>
+    <div class="about-image">
+      <!-- About image placeholder -->
+      <p>Image of James Bond legacy or car history here</p>
+    </div>
+  </section>
+
+  <!-- Models Section -->
+  <section id="models" class="models">
+    <h2>Our Models</h2>
+    <div class="model-cards">
+      <div class="model-card">
+        <!-- Model image placeholder -->
+        <p>Image of Model 1 here</p>
+        <h3>Model 1 - The Classic</h3>
+        <p>A sophisticated design, blending tradition with cutting-edge technology.</p>
+      </div>
+      <div class="model-card">
+        <!-- Model image placeholder -->
+        <p>Image of Model 2 here</p>
+        <h3>Model 2 - The Future</h3>
+        <p>A sleek, futuristic ride for the discerning enthusiast.</p>
+      </div>
+      <div class="model-card">
+        <!-- Model image placeholder -->
+        <p>Image of Model 3 here</p>
+        <h3>Model 3 - The Powerhouse</h3>
+        <p>Unmatched performance and unrelenting power on the road.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <!-- Gallery image placeholder -->
+        <p>Image of a high-speed action shot or a luxury interior</p>
+      </div>
+      <div class="gallery-item">
+        <!-- Gallery image placeholder -->
+        <p>Image of a Bond car in a scenic location</p>
+      </div>
+      <div class="gallery-item">
+        <!-- Gallery image placeholder -->
+        <p>Image of sleek car details here</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form action="#" method="POST" class="contact-form">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Bond Cars. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script defer>
+    // JavaScript code here
+    const images = [
+      'https://wallpaperaccess.com/full/13524174.jpg',
+      'https://wallpaperaccess.com/full/4966258.jpg',
+      'https://wallpaperaccess.com/full/4966337.jpg',
+      'https://wallpaperaccess.com/full/13524155.jpg'
+    ];
+
+    let currentImageIndex = 0;
+    const hero = document.getElementById('home'); // Make sure this ID matches your hero section
+
+    function changeBackground() {
+      hero.style.transition = "background-image 0.3s ease-in";
+      hero.style.backgroundImage = `url('${images[currentImageIndex]}')`;
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+    }
+
+    setInterval(changeBackground, 1500);
+    changeBackground(); // Initial background image
+  </script>
+
+</body>
+</html>
